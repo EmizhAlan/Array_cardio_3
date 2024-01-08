@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't ask</title>
+</head>
+<body>
+
+    <p>open console</p>
+
+    <script>
+
+        let age = 35;
+        let age1 = age;
+        console.log(age, age1);
+        age = 200;
+        console.log(age,age1);
+
+        let name = 'Alan';
+        let name23 = name;
+        console.log(name, name23);
+        name = 'Emizh';
+        console.log(name, name23);
+
+        const names = ['Alan', 'Ilyas', 'Amir', 'Masha'];
+
+        const team = names;
+
+        console.log(names, team);
+
+        const team2 = names.slice();
+
+        const team3 = [].concat(names);
+
+        const team4 = [...names];
+        team4[3] = 'he haw';
+        console.log(team4);
+
+        const team5 = Array.from(names);
+
+        const person = {
+            name: 'Alan Emizh',
+            age: 80
+        };
+
+        const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+        console.log(cap2);
+
+        const emizh = {
+            name: 'Alan',
+            age: 100,
+            social: {
+                VK: 'Emizh Alan',
+                Telegram: '+7 (918)-334-34-76'
+            }
+        };
+
+        console.log(emizh);
+
+        const dev = Object.assign({}, emizh);
+
+        const dev2 = JSON.parse(JSON.stringify(emizh));
+
+    </script>
+    
+</body>
+</html>
